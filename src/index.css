@@ -1,0 +1,32 @@
+.blog-title {
+  font-size: clamp(2.2rem, 4vw, 3rem);
+  font-weight: 700;
+  letter-spacing: -1px;
+  background: linear-gradient(90deg, #007bff, #6610f2);
+  background-clip: text;
+  color: transparent;
+}
+
+.blog-subtitle {
+  font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+  font-weight: 400;
+  color: #6c757d;
+  opacity: 0.9;
+  margin-top: 0.3rem;
+}
+
+body {
+  background: radial-gradient(circle at 30% 20%, #2c2f3a 0%, #1f222b 50%, #171922 100%);
+  min-height: 100vh;
+  font-family: sans-serif;
+  color: #f1f1f1;
+}
+
+.vd-text-label {
+  color: #f1f1f1;
+  font-size: clamp(1.1rem, 2.5vw, 1.2rem) !important;
+}
+
+.vd-btn {
+  background: linear-gradient(90deg, #007bff, #6610f2);
+}

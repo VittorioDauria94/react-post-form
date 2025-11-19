@@ -12,7 +12,9 @@ function App() {
       .post("https://67c5b4f3351c081993fb1ab6.mockapi.io/api/posts", formData)
       .then((resp) => {
         alert(
-          `Congrats, your post is online, the number of the post is ${resp.data.id}`
+          `Congrats, your post is online and ${
+            resp.data.public ? "public" : "private"
+          }, the number of the post is ${resp.data.id}`
         );
         setFormData(initialState);
       });

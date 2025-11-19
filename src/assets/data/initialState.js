@@ -2,7 +2,7 @@ const initialState = {
   author: "",
   title: "",
   body: "",
-  isPubblic: false,
+  public: false,
 };
 
 export default initialState;

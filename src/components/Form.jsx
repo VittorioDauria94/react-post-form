@@ -38,10 +38,7 @@ export default function Form({ formData, handleChange, handleSubmit }) {
         </div>
       </div>
       <div className="row mb-5">
-        <label
-          htmlFor="body"
-          className="col-sm-2 col-form-label vd-text-label"
-        >
+        <label htmlFor="body" className="col-sm-2 col-form-label vd-text-label">
           Body of the post
         </label>
         <div className="col-sm-10">
@@ -60,12 +57,12 @@ export default function Form({ formData, handleChange, handleSubmit }) {
         <input
           type="checkbox"
           className="form-check-input"
-          id="isPublic"
-          name="isPubblic"
-          checked={formData.isPubblic}
+          id="public"
+          name="public"
+          checked={formData.public}
           onChange={handleChange}
         />
-        <label className="form-check-label vd-text-label" htmlFor="isPublic">
+        <label className="form-check-label vd-text-label" htmlFor="public">
           Make this post public
         </label>
       </div>

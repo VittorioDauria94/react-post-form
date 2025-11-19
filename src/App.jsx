@@ -10,13 +10,14 @@ function App() {
   }
 
   function handleChange(e) {
-    const [name, type] = e.target.value;
-    if (type === "checkbox") {
-      setFormData({ ...formData, [name]: e.target.checked });
-    } else {
-      setFormData({ ...formData, [name]: e.target.value });
-    }
+    const { name, type, value, checked } = e.target;
+
+    setFormData((prev) => ({
+      ...prev,
+      [name]: type === "checkbox" ? checked : value,
+    }));
   }
+
   return (
     <>
       <div className="container text-center py-5">

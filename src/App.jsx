@@ -1,12 +1,21 @@
 import { useState } from "react";
 import Form from "./components/Form";
 import initialState from "./assets/data/initialState";
+import axios from "axios";
 
 function App() {
   const [formData, setFormData] = useState(initialState);
 
   function handleSubmit(e) {
     e.preventDefault();
+    axios
+      .post("https://67c5b4f3351c081993fb1ab6.mockapi.io/api/posts", formData)
+      .then((resp) => {
+        alert(
+          `Congrats, your post is online, the number of the post is ${resp.data.id}`
+        );
+        setFormData(initialState);
+      });
   }
 
   function handleChange(e) {
